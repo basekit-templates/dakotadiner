@@ -1,2 +1,3 @@
-dakotadiner
-===========
+Dakota Diner Menu Template
+
+=====
