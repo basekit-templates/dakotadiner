@@ -1,5 +1,5 @@
 {
-    "name":"myras",
+    "name":"dakotadiner",
     "thumbnail":"sycamore.png",
     "screenshot":"sycamore.png",
     "tags": {
@@ -12,10 +12,10 @@
         "Swatch 1": {
             "color1":"#ffffff",
             "color2":"#ffffff",
-            "color3":"#888888",
-            "color4":"#888888",
-            "color5":"#000000",
-            "color6":"#d4d3d3",
+            "color3":"#97c8a6",
+            "color4":"#fe8085",
+            "color5":"#444444",
+            "color6":"#a9a9a9",
             "color7":"#f4efec"
         },
         "Swatch 2": {
@@ -56,27 +56,27 @@
         }
     },
     "fontSwatch": {
-       "title": "Arvo",
+       "title": "Lobster",
         "font1": {
-            "font-family": "Abril Fatface",
-            "font-size": "24px",
-            "font-weight": "200",
+            "font-family": "Arial",
+            "font-size": "36px",
+            "font-weight": "700",
             "line-height": "44px",
             "color": "@color-swatch4",
             "letter-spacing": "inherit"
         },
         "font2": {
-            "font-family": "Abril Fatface",
+            "font-family": "Arial",
             "font-size": "24px",
-            "font-weight": "inherit",
+            "font-weight": "700",
             "line-height": "34px",
-            "color": "@color-swatch5",
+            "color": "@color-swatch4",
             "letter-spacing": "inherit"
         },
         "font3": {
             "font-family": "Arial",
             "font-size": "16px",
-            "font-weight": "300",
+            "font-weight": "700",
             "line-height": "28px",
             "color": "@color-swatch5",
             "letter-spacing": "inherit"
@@ -86,7 +86,7 @@
             "font-size": "15px",
             "font-weight": "300",
             "line-height": "24px",
-            "color": "@color-swatch5",
+            "color": "@color-swatch6",
             "letter-spacing": "inherit"
         },
         "font5": {
@@ -99,7 +99,7 @@
         },
         "font6": {
             "font-family": "Arial",
-            "font-size": "14px",
+            "font-size": "16px",
             "font-weight": "400",
             "line-height": "28px",
             "color": "@color-swatch6",
@@ -135,8 +135,8 @@
             "letter-spacing": "inherit"
         },
         "font10": {
-            "font-family": "Abril Fatface",
-            "font-size": "32px",
+            "font-family": "Lobster",
+            "font-size": "60px",
             "font-weight": "300",
             "line-height": "42px",
             "color": "@color-swatch1",
