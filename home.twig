@@ -1,0 +1,34 @@
+
+{% extends "layout.twig" %}
+
+{% block content %}
+
+<header>
+    <div class="wrapper clearfix">
+
+        <div class="companyheader clearfix">
+            {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+            {{widget('companyname', 'companyname', {"business": "Dakota Diner"})|raw}}
+            <div class="headercontent">
+                {{widget('content', 'headercontent', {"content":"<p>Example Street, The Pithay, Bristol, BS9 0XA</p>"})|raw}}
+                {{widget('content', 'headercontent', {"content":"<p>0828 288348</p>"})|raw}}
+            </div>
+        </div>
+       
+    </div><!--end wrapper clearfix-->
+</header>
+    <div class="wrapper clearfix">
+        {{widget('menusections', 'menusections1', {})|raw}}
+
+        {{widget('menu', 'menu1', {})|raw}}
+
+            <div class="footertext">
+                {{widget('content', 'footercolumn1content', {"content":"<p>COPYRIGHT. 2014</p>"})|raw}}
+            </div>
+</div>
+
+<footer>
+        
+</footer>
+
+{% endblock %}
