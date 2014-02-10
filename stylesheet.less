@@ -170,7 +170,7 @@ blockquote {
   margin-left:-20px;
 }
 
-.widget.companyname{
+.widget.companyname {
   text-align: center;
   display: inline;
   margin: 0;
@@ -319,13 +319,13 @@ footer .widget.profile .twitter span {
    BOTTOM ZONE
    =============================== */
 
-.bottom-zone{
+.bottom-zone {
   border-top:1px dotted @color-swatch3;
   width:100%;
   padding:30px 0px;
 }
 
-.bottom-zone-wrapper{
+.bottom-zone-wrapper {
   padding:20px;
 }
 
@@ -342,8 +342,8 @@ header {
   background-repeat: no-repeat;
   background-size:cover;
   background-color:@color-swatch3;
-  height:350px;
   margin-top:30px;
+  padding: 30px 0px 80px 0px;
 }
 
 
@@ -387,8 +387,7 @@ header {
    =============================== */
 
 @tablet: ~"only screen and (max-width: 768px)";
-@mobile: ~"only screen and (max-width: 320px)";
-@media only screen and (max-width: 1084px);
+@mobile: ~"only screen and (max-width: 480px)";
 
 /* ===============================
    3. CUSTOM CSS
@@ -401,7 +400,8 @@ header {
 
 .widget.menusections {
     text-align: center;
-    padding: 80px 0px 60px 0px;
+    padding: 60px 0px 40px 0px;
+    margin: 0;
     ul {
         display: inline-block;
         list-style: none;
@@ -450,10 +450,8 @@ header {
             }
         }
         li {
-            padding: 0 15px;
             float: left;
             display: block;
-            padding-right: 20px;
             @media @tablet {
                     width: 100%;
                     padding: 1em 0;
@@ -542,6 +540,7 @@ header {
                     position: relative;
                     &.menu-item-promoted { /* menu-item-promoted */
                         margin: 11px 1px 20px;
+                        padding: 20px;
                         .inner-item {
                             border: 0;
                             padding: 0;
@@ -555,7 +554,7 @@ header {
                             color: @color-swatch6;
                             margin:0px auto;
                             display:table;
-                            margin-bottom:15px;
+                            margin-top:20px;
                         }
                         h3 {
                             margin-top: 0 !important;
@@ -567,11 +566,11 @@ header {
                 }
 
                 .menu-subsection {
-                  margin-bottom:40px;
-                  padding:20px;
-                  border: 1px solid @color-swatch6;
-                  -webkit-box-shadow: 2px 2px 0 1px #9c9c9c;
-                  box-shadow: 2px 2px 0 1px #9c9c9c;
+                    margin-bottom:40px;
+                    padding:20px;
+                    border: 1px solid @color-swatch6;
+                    -webkit-box-shadow: 2px 2px 0 1px #9c9c9c;
+                    box-shadow: 2px 2px 0 1px #9c9c9c;
                 }
 
 /* ===============================
@@ -786,34 +785,6 @@ header {
     margin-right: 0.5em;
 }
 
-.vegetarian-icon {
-  background-color: @color-swatch4;
-  width: 25px;
-  height: 25px;
-  border: none;
-  -webkit-border-radius: 100px;
-  -moz-border-radius: 100px;
-  border-radius: 100px;
-  background-image: image('/images/v.png');
-  background-repeat: no-repeat;
-  background-size: 18px;
-  background-position: center;
-}
-
-.glutenFree-icon {
-  background-image: image('/images/gf.png');
-  background-color: @color-swatch3;
-  width: 25px;
-  height: 25px;
-  border: none;
-  -webkit-border-radius: 100px;
-  -moz-border-radius: 100px;
-  border-radius: 100px;
-  background-repeat: no-repeat;
-  background-size: 18px;
-  background-position: center;
-}
-
 dt,
 dd {
     display: inline-block;
@@ -826,30 +797,105 @@ dd {
 }
 
 dd {
-margin: 0 5px -7px;
+  margin: 0 5px -7px;
 }
 
 
 .menu-note {
-float: left;
-width: 100%;
+  float: left;
+  width: 100%;
 }
 
 .menu-dietary-key {
-float: left;
-width: 100%;
+  float: left;
+  width: 100%;
 }
 
-
-
-footer .wrapper {
-
-}
-
-
-footer .wrapper .widget.image img{
+footer .wrapper .widget.image img {
  margin: -128px auto 0;
 }
+
+.menu-section-item-dietary-props {
+                                margin-top: 0.5em;
+                                padding: 0;
+                                clear: both;
+                                display: block;
+                                .dietary-icon {
+                                    background-color: @color-swatch5;
+                                    width: auto;
+                                    height: 25px;
+                                    border: 0;
+                                    -webkit-border-radius: 5px;
+                                    -moz-border-radius: 5px;
+                                    border-radius: 5px;
+                                    background-repeat: no-repeat;
+                                    background-size: 19px;
+                                    background-position: center;
+                                    display: block;
+                                    font-family:@font-swatch5-font-family;
+                                    font-size:@font-swatch5-font-size;
+                                    z-index: 9999999;
+                                    color: @color-swatch1;
+                                    margin-right: 5px;
+                                    margin-bottom: 5px;
+                                    float: left;
+                                }
+                                .vegetarian-icon {
+                                    &:before { 
+                                    content: "veggie";
+                                    padding: 0 8px;                  
+                                    }
+                                }
+                                .vegan-icon {
+                                    &:before { 
+                                    content: "vegan";
+                                    padding: 0 8px;
+                                    }
+                                }
+                                .glutenfree-icon {
+                                    &:before { 
+                                    content: "gf";
+                                    padding: 0 8px;
+                                    }
+                                }
+                                .nutfree-icon {
+                                    &:before { 
+                                    content: "nf";
+                                    padding: 0 8px;
+                                    }
+                                }
+                                .dairyfree-icon {
+                                    &:before { 
+                                    content: "df";
+                                    padding: 0 8px;
+                                    }
+                                }
+                                .not-spicy-icon {
+                                    display: none;
+                                }
+                                .spicy-icon {
+                                    &:before { 
+                                    content: "mild";
+                                    padding: 7px;
+                                    }
+                                  }
+
+                                .medium-spicy-icon {
+                                    &:before { 
+                                    content: "medium";
+                                    padding: 7px;
+                                    }
+                                  }
+
+                                .hot-icon {
+                                    &:before { 
+                                    content: "hot";
+                                    padding: 7px;
+                                    }
+                                }
+
+                            }
+
 
 /* ===============================
    FOOTER
@@ -887,11 +933,6 @@ footer {
   margin-top:90px;
 }
 
-
-.menu-note, .menu-dietary-key, .vegetarian-icon .dietary-icon, .glutenFree-icon .dietary-icon {
-
-}
-
 /* ===============================
    STANDARD NAVIGATION
    =============================== */
@@ -912,18 +953,15 @@ footer {
   margin: 20px 0 0;
 }
 
-.widget.navigation ul.align-center li
-{
+.widget.navigation ul.align-center li {
   text-align: center;
 }
 
-.widget.navigation ul.align-left li
-{
+.widget.navigation ul.align-left li {
   text-align: left;
 }
 
-.widget.navigation ul.align-right li
-{
+.widget.navigation ul.align-right li {
   text-align: right;
 }
 
@@ -975,18 +1013,15 @@ footer {
   display: none;
 }
 
-.widget.extendednavigation ul.align-center li
-{
+.widget.extendednavigation ul.align-center li {
   text-align: center;
 }
 
-.widget.extendednavigation ul.align-left li
-{
+.widget.extendednavigation ul.align-left li {
   text-align: left;
 }
 
-.widget.extendednavigation ul.align-right li
-{
+.widget.extendednavigation ul.align-right li {
   text-align: right;
 }
 
@@ -1125,7 +1160,7 @@ header .widget.content p {
    FORM
    =============================== */
 
-.contactform{
+.contactform {
   border-top:1px solid @color-swatch4;
   border-bottom:1px solid @color-swatch4;
   padding:20px 0px;
@@ -1139,7 +1174,6 @@ header .widget.content p {
    =============================== */
 
 .booking-button .widget.button button {
-
   margin: 2em 0;
   padding: 15px;
   border: none;
@@ -1157,7 +1191,6 @@ header .widget.content p {
   text-decoration: none;
   letter-spacing: 1px;
   margin-top: 10px;
-
 }
 
 
@@ -1220,8 +1253,7 @@ header .widget.content p {
 
 /* FEATURE BUTTON */
 
-.widget.feature button
-{
+.widget.feature button {
   margin: 1em 0;
   padding: 17px 56px;
   border: 0;
@@ -1233,8 +1265,7 @@ header .widget.content p {
   text-decoration: none;
 }
 
-.widget.feature button:hover 
-{
+.widget.feature button:hover {
   background-color: @font-swatch7-background-color-hover;
   cursor: pointer;
   -webkit-transition: background-color 0.15s ease-in-out;
@@ -1243,23 +1274,19 @@ header .widget.content p {
   transition: background-color 0.15s ease-in-out;
 }
 
-.widget.feature button.btn.justifyleft
-{
+.widget.feature button.btn.justifyleft {
     text-align: left;
 }
 
-.widget.feature button.btn.justifycenter
-{
+.widget.feature button.btn.justifycenter {
     text-align: center;
 }
 
-.widget.feature button.btn.justifyright
-{
+.widget.feature button.btn.justifyright {
     text-align: right;
 }
 
-.widget.feature button.btn.justifyfull
-{
+.widget.feature button.btn.justifyfull {
     text-align: justify;
 }
 
@@ -1349,8 +1376,7 @@ header .widget.content p {
 }
 
 
-.widget.button button
-{
+.widget.button button {
   margin: 1em 0;
   padding: 17px 56px;
   border: 0;
@@ -1362,8 +1388,7 @@ header .widget.content p {
   text-decoration: none;
 }
 
-.widget.button button:hover 
-{
+.widget.button button:hover {
   background-color: @font-swatch7-background-color-hover;
   cursor: pointer;
   -webkit-transition: background-color 0.15s ease-in-out;
@@ -1375,23 +1400,19 @@ header .widget.content p {
 
 /* JUSTIFY */
 
-.widget.button button.btn.justifyleft
-{
+.widget.button button.btn.justifyleft {
     text-align: left;
 }
 
-.widget.button button.btn.justifycenter
-{
+.widget.button button.btn.justifycenter {
     text-align: center;
 }
 
-.widget.button button.btn.justifyright
-{
+.widget.button button.btn.justifyright {
     text-align: right;
 }
 
-.widget.button button.btn.justifyfull
-{
+.widget.button button.btn.justifyfull {
     text-align: justify;
 }
 
@@ -1416,14 +1437,12 @@ header .widget.content p {
    =============================== */
 
 
-.widget.content
-{
+.widget.content {
     padding: 0;
     overflow: hidden;
 }
 
-.widget.content span.expand
-{
+.widget.content span.expand {
     font-family: @font-swatch3-font-family;
     background-color: @color-swatch3;
     color: @font-swatch7-color;
@@ -1458,13 +1477,9 @@ header .widget.content p {
    IMAGE WIDGET
    =============================== */
 
-.widget.image img
-{
+.widget.image img {
     display:block;
     max-width: 100%;
-}
-
-.widget.image {
 }
 
 .widget.image span.image-title {
@@ -1491,10 +1506,6 @@ header .widget.content p {
    GALLERY WIDGET
    =============================== */
 
-
-.widget.gallery
-{
-}
 
 .widget.gallery ul {
     display:block;
@@ -1582,6 +1593,7 @@ header .widget.content p {
     color:@font-swatch5-color;
     letter-spacing: @font-swatch5-letter-spacing;
 }
+
 .widget.gallery li span.inner:hover .title {
    margin-bottom: 0;
 }
@@ -2039,7 +2051,6 @@ hr.line.align-right {
   background-image: image('/images/twitter.png');
   background-repeat: no-repeat;
   background-position: 16px;
-
   font-family: @font-swatch2-font-family;
   font-size:.9em;
   font-weight:@font-swatch7-font-weight;
@@ -2285,7 +2296,7 @@ hr.line.align-right {
   /* NAV */
 
   .desktop-nav {
-  display: none;
+    display: none;
   }
 
   .top-nav {
@@ -2351,7 +2362,7 @@ hr.line.align-right {
   .widget.extendednavigation ul li {
   }
 
-    .widget.extendednavigation ul li:last-child {
+  .widget.extendednavigation ul li:last-child {
     border-bottom: none;
   }
 
@@ -2372,14 +2383,16 @@ hr.line.align-right {
   .widget.extendednavigation ul li:hover > ul li {
   }
 
-
-
   .widget.extendednavigation ul li:hover > ul li .text, .widget.extendednavigation ul li:hover > ul li.folder .text {
 
     background-image: image('/images/arrow-left-wh.png');
     background-position: left center;
     background-repeat: no-repeat;
   }
+
+  .widget.menusections a.menu-pull {
+  padding: 45px 0px 60px 0px;
+}
 
   /* FEATURE */
 
@@ -2405,8 +2418,8 @@ hr.line.align-right {
       padding-bottom: 50%;
   }
 
-
 }
+
 
 @media only screen and (max-width : 650px) and (min-width : 481px) {
    /* Tablet view: 2 tiles */
@@ -2429,6 +2442,10 @@ hr.line.align-right {
    =============================== */
 
 @media only screen and (max-width: 480px) {
+
+  header {
+    height: 340px;
+  }
 
     /* MENU */
 
@@ -2479,12 +2496,12 @@ header {
 }
 
 .widget.menusections a.menu-pull {
-  padding: 65px 0px 60px 0px;
+  padding: 45px 0px 60px 0px;
 }
 
   /* CUSTOM CSS */
 
-.main{
+.main {
   padding:20px 0px 0px 0px;
 }
 
@@ -2567,7 +2584,6 @@ header {
         background-position: 14px center;
         background-repeat: no-repeat;
         background-color: @font-swatch7-background-color;
-
         font-family: @font-swatch7-font-family;
         font-size: .75em;
         font-weight: @font-swatch7-font-weight;
@@ -2624,9 +2640,11 @@ header {
   content: " ";
   display: table;
 }
+
 .clearfix:after {
   clear: both;
 }
+
 .clearfix {
   *zoom: 1;
 }
@@ -2645,7 +2663,7 @@ header {
   display: block;
   float: left;
   width: 31.3%;
-    padding:1%;
+  padding:1%;
   opacity: 0;
 }
 
@@ -2741,4 +2759,3 @@ header {
        -o-transition-property:      -o-transform, opacity;
           transition-property:         transform, opacity;
 }
-
