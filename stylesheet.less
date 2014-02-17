@@ -39,15 +39,6 @@ body {
   position: relative;
 }
 
-.companyheader h4 {
-  font-family:@font-swatch5-font-family;
-  font-size:@font-swatch5-font-size;
-  font-weight: @font-swatch5-font-weight;
-  line-height:@font-swatch5-line-height;
-  color:@font-swatch10-color;
-  letter-spacing: @font-swatch5-letter-spacing;
-}
-
 .companytitle {
   position: relative;
   width: 100%;
@@ -78,27 +69,29 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
    =============================== */
 
 header.bk-header {
-  background-image:image('/images/header-bg.png');
-  background-repeat: no-repeat;
-  background-size:cover;
-  background-color:@color-swatch3;
-  margin-top:30px;
-  padding: 2em 0 6em;
-  @media @tablet {
-    padding: 0 0 4em;
-    margin-top: 20px;
-  }
-  p {
-    color:@font-swatch8-color;
-    font-size: bkscale(@font-swatch8-font-size,1.1);
-  }
+    background-image:image('/images/header-bg.png');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-color:@color-swatch3;
+    margin-top:30px;
+    padding: 2em 0 6em;
+    @media @tablet {
+        padding: 0 0 4em;
+        margin-top: 20px;
+    }
+    p {
+        font-size: bkscale(@font-swatch8-font-size,1.1);
+    }
 }
 
 .companyheader {
-  display: block;
-  margin-top:60px;
-  width:100%;
-  text-align: center;
+    display: block;
+    margin-top:60px;
+    width:100%;
+    text-align: center;
+    h1, h2, h3, h4, p {
+        color: @color-swatch1;
+    }
 }
 
 /* COMPANY NAME */
@@ -171,10 +164,10 @@ header.bk-header {
     margin: 0;
     clear: both;
     ul {
-        display: inline-block;
+        display: table;
         list-style: none;
-        margin: 0px;
-        padding: 0;
+        text-align: center;
+        margin: 0 auto;
         @media @tablet {
             /* Hidden until nav icon is clicked */
             display: none;
@@ -184,12 +177,12 @@ header.bk-header {
             background-color: @color-swatch1;
         }
         li {
-            float: left;
-            display: block;
+            float: none;
+            display: inline-block;
             @media @tablet {
-                    width: 100%;
-                    padding: 1em 0;
-                    border-bottom: 1px dotted @color-swatch6;
+                width: 100%;
+                padding: 1em 0;
+                border-bottom: 1px dotted @color-swatch6;
             }
             &:last-child {
                 @media @tablet {
@@ -252,6 +245,11 @@ header.bk-header {
         &.menu-item-promoted { /* menu-item-promoted */
             margin: 11px 1px 20px;
             padding: 20px;
+            text-align: center;
+            .menu-section-item-dietary-props {
+                display: table;
+                margin: 0 auto;
+            }
             .inner-item {
                 border: 0;
                 padding: 0;
@@ -286,6 +284,17 @@ header.bk-header {
 .widget.menu .menu-items li {
     padding-left:20px;
     padding-right:20px;
+    // Font Scale-downs
+    h4 {
+        font-size: bkscale(@font-swatch4-font-size,0.9);
+    }
+    .menu-item-nutritional-prop {
+        font-size: bkscale(@font-swatch5-font-size,0.85);
+    }
+    .dietary-icon {
+        font-size: bkscale(@font-swatch5-font-size,0.8);   
+        padding: 0px 4px;
+    }
 }
 
 /* ===============================
@@ -300,6 +309,21 @@ header.bk-header {
 
 .inner-item {
     display: inline-block;
+}
+
+.menu-item-image-wrap {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    clear:both;
+    background-repeat: no-repeat;
+    background-position: center;
+    img {
+        display: none;
+    }
 }
 
 .menu-item-promoted {
@@ -340,18 +364,6 @@ header.bk-header {
     border-radius: 5px;
     width: 100%;
 }
-
-.menu-item-image-wrap {
-    background-size: cover;
-    background-position: center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    clear:both;
-}
-
-
-
 
 .menu-items,
 .menu-item-prices,
@@ -423,19 +435,12 @@ header.bk-header {
 }
 
 .menu-section.sub-section-promoted {
+    text-align: center;
     -webkit-box-shadow: 2px 2px 0 1px #9c9c9c;
     box-shadow: 2px 2px 0 1px #9c9c9c;
     padding:40px;
     border: 1px solid @color-swatch6;
     width:100%;
-}
-
-.menu-section-item-dietary-props {
-    margin-top: 1.5em;
-}
-
-.menu-section-item-dietary-props .dietary-icon {
-    margin-right: 0.5em;
 }
 
 dt,
@@ -469,10 +474,8 @@ footer .wrapper .widget.image img {
 }
 
 .menu-section-item-dietary-props {
-    margin-top: 0.5em;
     padding: 0;
     clear: both;
-    display: block;
     .dietary-icon {
         background-color: @color-swatch5;
         width: auto;
