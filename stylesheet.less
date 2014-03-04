@@ -513,7 +513,7 @@ header {
 
             /* ITEMS */
 
-            .menu-items { /* ol */
+            .menu-items { width:100%; /* ol */
                 column-count: 1;
                 column-gap: 50px;
                -moz-column-count: 1;
@@ -542,6 +542,7 @@ header {
                         margin: 11px 1px 20px;
                         padding: 20px;
                         .inner-item {
+                            width:100%;
                             border: 0;
                             padding: 0;
                             margin: 0;
@@ -832,85 +833,31 @@ footer .wrapper .widget.image img {
 }
 
 .menu-section-item-dietary-props {
-                                margin-top: 0.5em;
-                                padding: 0;
-                                clear: both;
-                                display: block;
-                                .dietary-icon {
-                                    background-color: @color-swatch5;
-                                    width: auto;
-                                    height: 25px;
-                                    border: 0;
-                                    -webkit-border-radius: 5px;
-                                    -moz-border-radius: 5px;
-                                    border-radius: 5px;
-                                    background-repeat: no-repeat;
-                                    background-size: 19px;
-                                    background-position: center;
-                                    display: block;
-                                    font-family:@font-swatch5-font-family;
-                                    font-size:@font-swatch5-font-size;
-                                    z-index: 9999999;
-                                    color: @color-swatch1;
-                                    margin-right: 5px;
-                                    margin-bottom: 5px;
-                                    float: left;
-                                }
-                                .vegetarian-icon {
-                                    &:before { 
-                                    content: "veggie";
-                                    padding: 0 8px;                  
-                                    }
-                                }
-                                .vegan-icon {
-                                    &:before { 
-                                    content: "vegan";
-                                    padding: 0 8px;
-                                    }
-                                }
-                                .glutenfree-icon {
-                                    &:before { 
-                                    content: "gf";
-                                    padding: 0 8px;
-                                    }
-                                }
-                                .nutfree-icon {
-                                    &:before { 
-                                    content: "nf";
-                                    padding: 0 8px;
-                                    }
-                                }
-                                .dairyfree-icon {
-                                    &:before { 
-                                    content: "df";
-                                    padding: 0 8px;
-                                    }
-                                }
-                                .not-spicy-icon {
-                                    display: none;
-                                }
-                                .spicy-icon {
-                                    &:before { 
-                                    content: "mild";
-                                    padding: 7px;
-                                    }
-                                  }
-
-                                .medium-spicy-icon {
-                                    &:before { 
-                                    content: "medium";
-                                    padding: 7px;
-                                    }
-                                  }
-
-                                .hot-icon {
-                                    &:before { 
-                                    content: "hot";
-                                    padding: 7px;
-                                    }
-                                }
-
-                            }
+  margin-top: 0.5em;
+  padding: 0;
+  clear: both;
+  display: block;
+  .dietary-icon {
+      background-color: @color-swatch5;
+      width: auto;
+      height: 25px;
+      border: 0;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      background-repeat: no-repeat;
+      background-size: 19px;
+      background-position: center;
+      display: block;
+      font-family:@font-swatch5-font-family;
+      font-size:@font-swatch5-font-size;
+      z-index: 9999999;
+      color: @color-swatch1;
+      margin-right: 5px;
+      margin-bottom: 5px;
+      float: left;
+  }
+}
 
 .widget.menu .menu-section-item-dietary-props .dietary-icon, .widget.menu .menu-info .dietary-icon {
   width:0;
