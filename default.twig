@@ -3,7 +3,13 @@
 
 {% block content %}
 
-<header>
+{% if pages|length > 1 %}
+    <div class="wrapper clearfix">
+        {{widget('extendednavigation', 'navigationheader', {})|raw}}
+    </div>
+{% endif %}
+
+<header class="bk-header">
     <div class="wrapper clearfix">
         <div class="companyheader clearfix">
             {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
@@ -15,15 +21,11 @@
         </div>
     </div><!--end wrapper clearfix-->
 </header>
-    <div class="wrapper clearfix">
-<div class="main wrapper clearfix">
+<div class="wrapper clearfix">
     {{zone('main')|raw}}
-</div>  
-            <div class="footertext">
-                {{widget('content', 'footercolumn1content', {"content":"<p>COPYRIGHT. 2014</p>"})|raw}}
-            </div>
+    <div class="footertext">
+        {{widget('content', 'footercolumn1content', {"content":"<p>COPYRIGHT. 2014</p>"})|raw}}
     </div>
-<footer>     
-</footer>
+</div>
 
 {% endblock %}
